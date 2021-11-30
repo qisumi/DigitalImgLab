@@ -1,0 +1,6 @@
+[
+{
+  "directory": "C:\\Users\\ZiQiQ\\VSCodeProjects\\CppProjects\\CVLab",
+  "arguments": ["ccache.exe", "x86_64-w64-mingw32-g++", "-c", "-O2", "-std=c++14", "-o", "build\\.objs\\main\\windows\\x64\\release\\src\\main.cpp.obj", "src\\main.cpp"],
+  "file": "src\\main.cpp"
+}]

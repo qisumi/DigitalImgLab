@@ -1,0 +1,15 @@
+# Xmake cache
+.xmake/
+build/
+
+# test images
+*.bmp
+
+# compiled bins
+bin/
+
+# clangd cache
+.cache/
+
+# test excuteable file
+main.exe

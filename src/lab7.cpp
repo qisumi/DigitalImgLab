@@ -16,6 +16,12 @@ int WHITE[] = {255, 255, 255};
 int RED[] = {255, 0, 0};
 using uint8 = unsigned short;
 
+/**
+ * @brief 降噪算法，将所有孤立的白色点降为黑色
+ * 
+ * @param source 源图像
+ * @return CImg<uint8> 
+ */
 CImg<uint8> binary_filter(CImg<uint8> &source) {
   int width = source.width();
   int height = source.height();
@@ -42,6 +48,12 @@ CImg<uint8> binary_filter(CImg<uint8> &source) {
   return target;
 }
 
+/**
+ * @brief 对图像分区域进行图像分割
+ * 
+ * @param source 
+ * @return CImg<uint8> 
+ */
 CImg<uint8> img_partition(CImg<uint8> &source) {
   int width = source.width();
   int height = source.height();
@@ -64,6 +76,12 @@ CImg<uint8> img_partition(CImg<uint8> &source) {
   return binary_filter(target);
 }
 
+/**
+ * @brief 边缘检测
+ * 
+ * @param source 
+ * @return CImg<uint8> 
+ */
 CImg<uint8> edge_detect(CImg<uint8> &source) {
   int width = source.width();
   int height = source.height();
@@ -88,6 +106,12 @@ CImg<uint8> edge_detect(CImg<uint8> &source) {
   return target;
 }
 
+/**
+ * @brief 目标计数
+ * 
+ * @param source 
+ * @return int 
+ */
 int count_object(CImg<uint8> &source) {
   int ans = 0;
   struct Point {
